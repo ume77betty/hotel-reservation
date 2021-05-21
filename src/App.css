@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*css reset above*/
+
+.slick-dots {
+  position: absolute;
+  top:  510px;
+  left: 150px;
+  text-align: left;
+  height: 30px;
+  width: 170px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.slick-dots li button:before {
+  opacity: 0.7;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.slick-dots li.slick-active button:before{
+  opacity: 1;
+  color: rgba(56, 71, 11, 0.7);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html, body {
+  font-family: "Noto Sans TC", sans-serif;
 }
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-page {
+  position: absolute;
+  top: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-area {
+  justify-content: center;
+  margin: 0px 100px 30px 130px;
+}
+
+.logo {
+  background-image: url('./assets/img/logo.svg');
+  width: 142.55px;
+  height: 255.22px;
+}
+
+.hotel-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: white;
+}
+
+.hotel-info h1 {
+  margin: 70px 0 20px 0;
+  font-weight: bold;
+}
+
+.hotel-info p {
+  margin-bottom: 5px;
+}
+
+.room-area {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750px;
+  height: 400px;
+}
+
+.room-1, .room-2, .room-3, .room-4, .room-5, .room-6 {
+  width: 250px;
+  height: 200px;
+  background-size: cover;
+  font-size: 19px;
+  font-family: "Open Sans";
+  position: relative;
+  background-size: cover;
+  background-position: center 80%;
+}
+
+.room-1::after, .room-2::after, .room-3::after, .room-4::after, .room-5::after, .room-6::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(56, 71, 11, 0.6);
+  color: white;
+  opacity: 0;
+}
+
+.room-1:hover::after, .room-2:hover::after, .room-3:hover::after, .room-4:hover::after, .room-5:hover::after, .room-6:hover::after {
+  opacity: 1;
+  transition: opacity 0.4s ease 0s;
+}
+
+.room-1 {
+  background-image: url('./assets/img/room1/room-1-1.jpeg');
+}
+
+.room-1::after {
+  content: "Single Room";
+}
+
+.room-2 {
+  background-image: url('./assets/img/room2/room-2-2.jpeg');
+}
+
+.room-2::after {
+  content: "Deluxe Single Room";
+}
+
+.room-3 {
+  background-image: url('./assets/img/room3/room-3-2.jpeg');
+}
+
+.room-3::after {
+  content: "Double Room";
+}
+
+.room-4 {
+  background-image: url('./assets/img/room4/room-4-3.jpeg');
+}
+
+.room-4::after {
+  content: "Deluxe Double Room";
+}
+
+.room-5 {
+  background-image: url('./assets/img/room5/room-5-2.jpeg');
+}
+
+.room-5::after {
+  content: "Twin Room";
+}
+
+.room-6 {
+  background-image: url('./assets/img/room6/room-6-1.jpeg');
+}
+
+.room-6::after {
+  content: "Deluxe Twin Room";
+}
+

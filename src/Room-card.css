@@ -1,0 +1,760 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*css reset above*/
+
+.loading {
+	background-color: rgba(148, 156, 124, 1);
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	z-index: 50;
+	animation-name: load;
+	animation-duration: 1s;
+	animation-delay: 1s;
+}
+
+@keyframes load {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+.loading-dot-1, .loading-dot-2, .loading-dot-3, .loading-dot-4 {
+	font-size: 100px;
+	color: white;
+  position: absolute;
+}
+
+.loading-dot-1 {
+	animation: MoveUpDown1 1s linear infinite;
+	left: 37%;
+  bottom: 200px;
+}
+
+.loading-dot-2 {
+	animation: MoveUpDown1 1s linear infinite;
+	left: 43%;
+  bottom: 200px;
+	animation-delay: 0.1s;
+}
+
+.loading-dot-3 {
+	animation: MoveUpDown1 1s linear infinite;
+	left: 49%;
+  bottom: 200px;
+	animation-delay: 0.2s;
+}
+
+.loading-dot-4 {
+	animation: MoveUpDown1 1s linear infinite;
+	left: 55%;
+  bottom: 200px;
+	animation-delay: 0.3s;
+}
+
+@keyframes MoveUpDown1 {
+  0%, 100% {
+    bottom: 200px;
+  }
+  50% {
+    bottom: 300px;
+  }
+}
+
+.room-card {
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+.room-slider {
+	display: block;
+	width: 1200px;
+}
+
+.icon {
+	width: 40px;
+	height: 40px;
+	margin: 10px;
+}
+
+.room-background {
+	width: 100%;
+	height: 100vh;
+	z-index: 10;
+}
+
+.room-bg-container {
+  height: 100vh;
+	width: 42%;
+	z-index: 10;
+	position: fixed;
+}
+
+.room-info {
+	margin-left: 45%;
+	margin-right: 20px;
+}
+
+.top-row {
+	display: flex;
+}
+
+.room-name {
+	color: rgba(56, 71, 11, 1);
+	font-family: "Open Sans", sans-serif;
+	font-size: 40px;
+	font-weight: 500;
+	margin-top: 50px;
+}
+
+.room-short-description {
+	color: rgba(56, 71, 11, 1);
+	margin-top: 70px;
+	margin-left: 90px;
+	font-size: 15px;
+	font-weight: 550;
+}
+
+.medium-row {
+	margin-top: 50px;
+	color: rgba(56, 71, 11, 1);
+	opacity: 0.9;
+	font-size: 14px;
+	font-weight: 350;
+}
+
+.room-price {
+	margin-bottom: 10px;
+}
+
+.check-in {
+	margin-bottom: 10px;
+}
+
+.check-out {
+	margin-bottom: 30px;
+}
+
+.description-list li {
+	line-height: 30px;
+	text-indent: -20px;
+	padding-left: 20px;
+}
+
+.amenities {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.room-amenity {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	color: rgba(148, 156, 124, 1);
+	position: relative;
+	padding: 5px;
+	width: 95px;
+	margin-bottom: 20px;
+}
+
+.icon {
+	width: 40px;
+	height: 45px;
+	background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.check-icon {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 13px;
+	left: 60px;
+	transform: translateX(100%);
+}
+
+.calendar-body {
+	width: 280px;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto;
+	text-align: center;
+}
+
+.days-of-week {
+	padding: 10px 0px;
+	color: rgba(56, 71, 11, 0.5);
+	font-size: 12px;
+	border-bottom: 1px solid rgba(56, 71, 11, 0.1);
+}
+
+.non-date {
+	padding: 11px 0px;
+	margin: 4px;
+}
+
+.date {
+	padding: 11px 0px;
+	font-size: 12px;
+	color: #38470B;
+	opacity: 0.9;
+	margin: 4px;
+	cursor: pointer;
+}
+
+.date:hover {
+	background-color: rgb(215, 218, 206);
+	border-radius: 50%;
+}
+
+.disable-date {
+	padding: 11px 0px;
+	font-size: 12px;
+	color: #38470B;
+	text-decoration:line-through;
+	opacity: 0.2;
+	margin: 4px;
+	pointer-events: none;
+}
+
+.whole-calendar {
+	display: flex;
+	border: 1.4px solid #38470B;
+	padding: 3px 10px 0px 20px;
+	box-sizing: border-box;
+}
+
+.calendar-wrapper {
+	padding: 15px;
+	margin-right: 10px;
+}
+
+.prev-icon, .next-icon {
+	width: 15px;
+	height: 15px;
+	background-repeat: no-repeat;
+  background-position: center center;
+	margin: 7px 0px 7px 0px;
+	cursor: pointer;
+}
+
+.calendar-header {
+	display: flex;
+	margin-bottom: 5px;
+}
+
+.room-empty {
+	margin-bottom: 30px;
+}
+
+.room-empty-header {
+	display: flex;
+}
+
+.room-empty-header h1{
+	margin-bottom: 10px;
+	color: #38470B;
+	font-size: 14px;
+	font-weight: 300;
+	margin-right: 30px;
+}
+
+.reserve-duplicate {
+	color: #38470B;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+
+.non-duplicate {
+	display: none;
+}
+
+.calendar-month-year {
+	text-align: center;
+	color: #38470B;
+	margin: 5px 10px 5px 10px;
+	width: 100%;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.dialog-bg {
+	width: 100%;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 20;
+}
+
+.dialog-container {
+	position: absolute;
+	width: calc(100% - 150px);
+	height: calc(100% - 30px);
+	display: flex;
+	left: 6%;
+	top: 3%;
+	z-index: 25;
+	background: white;
+	border: 1px solid #38470B;
+}
+
+.cancel-btn {
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	top: 38.9px;
+	right: 38.9px;
+	z-index: 30;
+	cursor: pointer;
+}
+
+.reservation-form {
+	padding: 30px 65px 25px 65px;
+	background-color: #38470B;
+	color: white;
+	width: 350px;
+}
+
+.name-input, .phone-input, .check-in-input, .check-out-input {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.name, .tel, .check-in-picker, .check-out-picker {
+	display: block;
+	margin-bottom: 15px;
+	width: 90%;
+	height: 30px;
+	font-size: 16px;
+	font-weight: 600;
+	padding-left: 10px;
+	color: #38470B;
+}
+
+.check-in-picker, .check-out-picker {
+	background-color: white;
+	line-height: 30px;
+	padding: 1px 2px 1px 10px;
+	border: 2px solid white;
+	position: relative;
+}
+
+.picker {
+	width: 15px;
+	height: 10px;
+	position: absolute;
+	top: 40%;
+	left: 93%;
+	background-image: url('./assets/img/icons/picker.png');
+	background-repeat: no-repeat;
+}
+
+.small-calendar {
+	left: -4px;
+	width: 285px;
+	height: 250px;
+	background-color: white;
+	padding: 5px 10px 10px 10px;
+	border: 2px solid #38470B;
+	position: absolute;
+	z-index: 30;
+}
+
+.SC-header {
+	display: flex;
+	justify-content: space-around;
+	font-weight: 600;
+	font-size: 12px;
+	height: 30px;
+	line-height: 25px;
+	color: #38470B;
+}
+
+.SC-body {
+	font-weight: 500;
+	font-size: 12px;
+	width: 285px;
+	height: 93%;
+	display: grid;
+	grid-template-columns: 41px 41px 41px 41px 41px 41px 41px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.SC-days-of-week {
+	border-bottom: 1px solid rgba(56, 71, 11, 0.1);
+	color: rgba(56, 71, 11, 0.5);
+}
+
+.SC-date {
+	color: #38470B;
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.SC-date:hover {
+	background-color: rgb(215, 218, 206);
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	left: 8px;
+	top: 3px;
+	position: relative;
+	line-height: 25px;
+}
+
+.SC-disable-date {
+	color: #38470B;
+	text-decoration:line-through;
+	opacity: 0.2;
+	pointer-events: none;
+}
+
+.SC-select-start-date-bg, .SC-select-end-date-bg {
+	position: relative;
+	left: 8px;
+	top: 3px;
+	width: 25px;
+	height: 25px;
+	color: white;
+	line-height: 25px;
+	font-weight: 500;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.SC-select-start-date-bg {
+	background-color: rgba(56, 71, 11, 0.9);
+}
+
+.SC-select-end-date-bg {
+	background-color: rgba(56, 71, 11, 0.5);
+}
+	
+
+.day-count {
+	height: 30px;
+	margin: 15px 0px;
+	color: #949C7C;
+	font-size: 14px;
+	border-bottom: 1px solid #949C7C;
+}
+
+.total {
+	text-align: right;
+}
+
+.money-total {
+	font-size: 26px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.confirm-btn {
+	margin-top: 15px;
+	margin-bottom: 7px;
+	width: 90%;
+	height: 44px;
+	background-color: #949C7C;
+	border: none;
+	font-size: 18px;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.notice {
+	width: 90%;
+	font-size: 12px;
+	text-align: center;
+}
+
+.dialog-right {
+	width: 60%;
+	padding: 40px 20px 20px 20px;
+	position: relative;
+	color: #38470B;
+	margin-left: 10px;
+}
+
+.right-title {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "Open Sans", sans-serif;
+	margin-bottom: 10px;
+	display: flex;
+	width: 90%;
+}
+
+.right-title::after {
+	content: "";
+	height: 1px;
+	width: 100%;
+	background: #949C7C;
+	display: block;
+	flex: 1 1 0%;
+	margin: 13px 0px 0px 13px;
+}
+
+.right-short-description, .right-price {
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 400;
+}
+
+.right-available {
+	display: flex;
+	flex-wrap: wrap;
+	color: #949C7C;
+	font-weight: 300;
+	font-size: 12px;
+	text-align: center;
+	justify-content: left;
+	width: 85%;
+	margin: 20px 0px 20px 0px;
+}
+
+.right-available p {
+	width: 48px;
+}
+
+.right-icon {
+	padding-right: 5px;
+	width: 50px;
+	height: 45px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.reservation-info li {
+	list-style: disc;
+	list-style-position: inside;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.reservation-info-title {
+	display: flex;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.reservation-info-title::after {
+	content: "";
+	height: 1px;
+	width: 100%;
+	background: #949C7C;
+	display: block;
+	flex: 1 1 0%;
+	margin: 7px 0px 0px 13px;
+}
+
+.reservation-flow {
+	display: flex;
+}
+
+.reservation-flow-title {
+	display: flex;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.reservation-flow-title::after {
+	content: "";
+	height: 1px;
+	width: 100%;
+	background: #949C7C;
+	display: block;
+	flex: 1 1 0%;
+	margin: 7px 0px 0px 13px;
+}
+
+.step-1, .step-2, .step-3 {
+	border: 1px solid #949C7C;
+	height: 134px;
+	width: 160px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font-size: 13px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 20px;
+}
+
+.step-1-logo, .step-2-logo, .step-3-logo {
+	width: 100%;
+	height: 50px;
+	background-color: #949C7C;
+	background-repeat: no-repeat;
+  background-position: center center;
+	margin-bottom: 10px;
+}
+
+.step-1-logo {
+	background-image: url('./assets/img/icons/reservation-step1.svg')
+}
+
+.step-2-logo {
+	background-image: url('./assets/img/icons/reservation-step2.svg');
+}
+
+.step-3-logo {
+	background-image: url('./assets/img/icons/reservation-step3.svg');
+}
+
+.select-start-date {
+	margin-left: 4px;
+	position: absolute;
+	width: 32px;
+	height: 34px;
+	background-color: #38470B;
+	color: white;
+	line-height: 34px;
+	font-weight: 600;
+	border-radius: 50%;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.select-start-date-bg {
+	box-sizing: border-box;
+	margin-top: 4px;
+	position: relative;
+	height: 34px;
+}
+
+.select-end-date {
+	margin-left: 4px;
+	background-color: #949C7C;
+	position: absolute;
+	width: 32px;
+	height: 34px;
+	color: white;
+	line-height: 34px;
+	font-weight: 600;
+	border-radius: 50%;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.select-end-date-bg {
+	box-sizing: border-box;
+	margin-top: 4px;
+	position: relative;
+	height: 34px;
+}
+
+.default {
+	display: none;
+}
+
+.success, .failure {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	z-index: 25;
+	background: rgba(56, 71, 11, 1);
+	border: 1px solid #38470B;
+	display: block;
+	color: white;
+	font-family: "Noto Sans CJK TC", sans-serif;
+	animation: fadein 0.3s;
+}
+
+@keyframes fadein {
+	from {opacity: 0.5;}
+	to {opacity: 1;}
+}
+
+.cancel-white {
+	background-image: url('./assets/img/icons/cancel-white.png');
+	height: 13px;
+	width: 13px;
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	cursor: pointer;
+}
+
+.success-icon {
+	background-image: url('./assets/img/icons/success.svg');
+	width: 124.42px;
+	height: 157.16px;
+	margin: 100px auto 60px auto;
+}
+
+.failure-icon {
+	background-image: url('./assets/img/icons/failure.svg');
+	width: 124.42px;
+	height: 157.16px;
+	margin: 100px auto 60px auto;
+}
+
+.success h1, .failure h1 {
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.success h2, .failure h2 {
+	font-size: 18px;
+	text-align: center;
+	line-height: 30px;
+}
