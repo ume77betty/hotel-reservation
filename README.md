@@ -1,5 +1,5 @@
 # Hotel Reservation - House Hotel 好室旅店
-#### Site : https://ume77betty.github.io/hotel-reservation/
+#### Demo: https://ume77betty.github.io/hotel-reservation/
 
 
 UI design by [Penny](https://challenge.thef2e.com/user/2232).
